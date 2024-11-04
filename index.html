@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Cyber Simulation</h1>
+        
+        <!-- Level 1: Password Crack -->
+        <div id="level1" class="level">
+            <p>Level 1: Break the Code</p>
+            <p>Enter the correct password to access the system:</p>
+            <input type="password" id="password" placeholder="Enter password">
+            <button onclick="checkPassword()">Hack</button>
+            <p id="feedback"></p>
+        </div>
+
+        <!-- Level 2: Decrypt Message -->
+        <div id="level2" class="level" style="display: none;">
+            <p>Level 2: Decrypt the Message</p>
+            <p>Encrypted Message: "Uifsf jt b tfdsfu dpnf po b sfbm czft!"</p>
+            <p>Hint: Caesar Cipher with shift -1</p>
+            <input type="text" id="decryptedMessage" placeholder="Decrypted message">
+            <button onclick="checkDecryption()">Submit</button>
+            <p id="decryptionFeedback"></p>
+        </div>
+
+        <!-- Level 3: Phishing URL -->
+        <div id="level3" class="level" style="display: none;">
+            <p>Level 3: Identify the Safe URL</p>
+            <p>Which one of these is the real website?</p>
+            <ul>
+                <li><button onclick="checkURL('safe')">www.bank-security.com</button></li>
+                <li><button onclick="checkURL('phishing1')">www.banc-secure.com</button></li>
+                <li><button onclick="checkURL('phishing2')">www.bank-login.com</button></li>
+            </ul>
+            <p id="urlFeedback"></p>
+        </div>
+
+        <!-- Level 4: CAPTCHA -->
+        <div id="level4" class="level" style="display: none;">
+            <p>Level 4: Prove You Are Human</p>
+            <p>Type the following code exactly: <strong>92F2Y</strong></p>
+            <input type="text" id="captchaInput" placeholder="Enter CAPTCHA">
+            <button onclick="checkCaptcha()">Submit</button>
+            <p id="captchaFeedback"></p>
+        </div>
+
+        
+        <!-- Level 5: SQL Injection -->
+        <div id="level5" class="level" style="display: none;">
+            <p>Level 5: SQL Injection</p>
+            <p>Enter username to bypass the login:</p>
+            <input type="text" id="sqlInjectionInput" placeholder="Enter username">
+            <button onclick="checkSQLInjection()">Submit</button>
+            <p id="sqlFeedback"></p>
+        </div>
+
+        <!-- Level 6: XSS Injection -->
+        <div id="level6" class="level" style="display: none;">
+            <p>Level 6: Cross-Site Scripting (XSS)</p>
+            <p>Inject JavaScript code to display the message: <strong>"Hello, World!"</strong></p>
+            <input type="text" id="xssInput" placeholder="Enter JavaScript code">
+            <button onclick="checkXSS()">Submit</button>
+            <p id="xssFeedback"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
